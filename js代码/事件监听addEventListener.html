@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听addEventListener</title>
+</head>
+<body>
+<button>按钮1</button>
+<button>按钮2</button>
+<script>
+    var btns = document.querySelectorAll('button');
+    //1.传统事件 后面的会覆盖值
+    btns[0].onclick = function () {
+        alert('nihao');
+    }
+    btns[0].onclick =function () {
+        alert('zaijian');
+    }
+    //2.使用addEventListener
+    //(1) 后面是字符串，而且不用on
+    //(2) 两个事件就会弹出两个
+    btns[1].addEventListener('click',function () {
+        alert('1diyige');
+    });
+    btns[1].addEventListener('click',function () {
+        alert('2dierge');
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .nav {
+            width: 500px;
+            margin: 30px auto;
+        }
+        .nav>li {
+            float: left;
+            margin-left: 10px;
+            position:relative;
+        }
+        .nav ul {
+            display: none;
+            position: absolute;
+
+
+        }
+    </style>
+</head>
+<body>
+<ul class="nav" >
+    <li >
+        <a href="#">导航1</a>
+        <ul >
+            <li><a href="#">微博1</a> </li>
+            <li><a href="#">登录2</a> </li>
+            <li><a href="#">退出3</a> </li>
+        </ul>
+<!--是li 不是其他的l1，炸裂-->
+    </li>
+    <li ><a href="#">导航2</a>
+        <ul >
+            <li><a href="#">微博2</a> </li>
+            <li><a href="#">登录2</a> </li>
+            <li><a href="#">退出3</a> </li>
+        </ul>
+    </li>
+    <li ><a href="#">导航3</a>
+        <ul >
+            <li><a href="#">微博3</a> </li>
+            <li><a href="#">登录2</a> </li>
+            <li><a href="#">退出3</a> </li>
+        </ul>
+    </li>
+
+</ul>
+<script>
+    var yc = document.querySelector('.nav');
+    var lis = yc.children;
+    for (var i =0;i < lis.length;i++){
+        lis[i].onmouseover = function () {
+            this.children[1].style.display = 'block';
+        }
+        lis[i].onmouseout = function () {
+            this.children[1].style.display = 'none';
+        }
+    }
+    console.log(lis)
+</script>
+</body>
+</html>

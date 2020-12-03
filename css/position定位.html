@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position定位</title>
+    <style>
+        div.static {
+            position: static;
+            border: 3px solid red;
+        }
+        p.pos_fixed {
+            /*生成绝对定位的原色，相对于浏览器定位*/
+            position: fixed;
+            top: 10px;
+            right: 16px;
+        }
+        /*相对于原来位置的相对位置*/
+        h2.pos_relative_left {
+            position: relative;
+            left: -20px;
+            color: #FFA500;
+        }
+        h2.pos_relative_right {
+            position: relative;
+            left: 20px;
+            color: pink;
+
+        }
+        /*相对于网页进行定位*/
+        h3.pos_absolute {
+            position: absolute;
+            left: 300px;
+            top: 400px;
+        }
+        /*不会掉出网页*/
+        h4.pos_sticky {
+            position: sticky;
+            top: 100px;
+            padding: 5px;
+            border: 3px solid green;
+        }
+        /*设置成下一层，不会遮住其他*/
+        img {
+            position: absolute;
+            top:0px;
+            left:0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+<img src="cat.jpg">
+<p class="pos_fixed">这个相对于浏览器进行定位</p>
+<h3 class="pos_absolute">这是相对网页进行定位</h3>
+<h2>这是个正常的位置</h2>
+<h2 class="pos_relative_left">这个相对向左移动</h2>
+<h2 class="pos_relative_right">这个相对向右移动</h2>
+<h4 class="pos_sticky" align="center">这是粘性定位，滚动不会掉出浏览器界面</h4>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+<div class="static">这个是静态定位了</div>
+</body>
+</html>

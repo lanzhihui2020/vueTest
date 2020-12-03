@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复选框全选中</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td >
+            <!--选时要在复选框里设id-->
+            <input type="checkbox" id="h" >全选框
+        </td>
+    </tr>
+    </thead>
+    <tbody id="c_tb">
+        <tr>
+            <td><input type="checkbox">复选框1</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox">复选框2</td>
+        </tr>
+    </tbody>
+</table>
+<script>
+    var qx = document.getElementById('h');
+    var tds = document.getElementById('c_tb').getElementsByTagName('input');
+    qx.onclick = function () {
+        for (var i = 0; i<tds.length; i++){
+            tds[i].checked = this.checked;
+        }
+    }
+    for (var i = 0;i < tds.length; i++){
+        tds[i].onclick = function () {
+            //设置变量，都选中时，全选才会选中
+            var flag = true;
+            //这里的i实在函数里
+            for (var i = 0;i < tds.length; i++){
+                //只要有一个没选中的，全选框就会是false
+                if (tds[i].checked == false){
+                    flag = false;
+                }
+            }
+            qx.checked = flag;
+        }
+    }
+</script>
+</body>
+</html>

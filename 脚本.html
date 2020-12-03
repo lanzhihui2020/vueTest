@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h3 id="one">点击可变</h3>
+<script>
+    // 改变值
+    function myFunction()
+    {
+     document.getElementById("one").innerHTML="变化"
+    }
+</script>
+<button type="button" onclick="myFunction()">点我</button>
+<h3 id="demo">改变这个值得颜色</h3>
+<script>
+    function twoFunction(){
+        x=document.getElementById("demo")
+        x.style.color="#ff0000"
+    }
+</script>
+<button type="button1" onclick="twoFunction()">点击</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用函数实线数组反转和排序</title>
+    <script>
+        function fanzhuan(arr) {
+            var k = '';
+            for (var i = 0;i<arr.length/2;i++){
+                k = arr[i];
+                arr[i] = arr[arr.length-1-i];
+                arr[arr.length-1-i] = k ;
+            }
+        }
+        var array = [11,23,13,44,5];
+        fanzhuan(array);
+        console.log(array);
+
+        function sorf(arr) {
+            var l = '';
+            for (var i = 0;i < arr.length-1; i++){
+               for (var j = i+1; j<arr.length;j++)
+                if (arr[i]<arr[j]){
+                    l= arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = l;
+                }
+            }
+        }
+        sorf(array);
+        console.log(array);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

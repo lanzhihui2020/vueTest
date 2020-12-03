@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格复制</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0
+        }
+        table {
+            width: 400px;
+            margin: 100px auto;
+        }
+        thead {
+            background-color: lime;
+        }
+
+    </style>
+</head>
+<body>
+<table cellspacing="0">
+    <thead>
+    <tr>
+        <th>姓名</th>
+        <th>科目</th>
+        <th>成绩</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+<script>
+    //先准备好数据，通常从数据库获得
+    var datas = [ {name: 'hhh',
+        subject: 'JavaScript',
+        score: 100,
+        },
+        {name: 'qqq',
+            subject: 'JavaScript',
+            score: 98,
+        },
+        {name: 'www',
+            subject: 'JavaScript',
+            score: 99,
+        },
+        {name: 'eee',
+            subject: 'JavaScript',
+            score: 88,
+        }
+    ];
+    //开始进行复制
+    var tbody = document.querySelector('tbody');
+    for (var i = 0;i < datas.length;i++){
+        //创建行三个
+        var tr = document.createElement('tr');
+        //添加行
+        tbody.appendChild(tr);
+        //遍历每行数据
+        for (var k in datas[i]){
+            //添加每行的数据
+            var td = document.createElement('td');
+            //改变值 可以不用（）
+            td.innerHTML = (datas[i])[k];
+            //添加数据值
+            tr.appendChild(td);
+        }
+        var tds = document.createElement('td');
+        tds.innerHTML = '<a href = "javaScript:;">删除</a>';
+        tr.appendChild(tds);
+    }
+    var as = document.querySelectorAll('a');
+    for (var i = 0;i < as.length;i++){
+        as[i].onclick = function () {
+            //删除是父元素下的子元素，this.parentNode是单元格，再加个parentNode
+            tbody.removeChild(this.parentNode.parentNode);
+
+        }
+    }
+</script>
+</body>
+</html>

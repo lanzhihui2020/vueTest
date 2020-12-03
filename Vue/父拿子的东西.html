@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn ref="aaa"></cpn>
+  <button @click="btnClick">按钮</button>
+</div>
+<template id="cpn">
+  <div>
+    子组件
+  </div>
+</template>
+<script src="vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message:'nihao'
+    },
+    methods: {
+      btnClick(){
+       // console.log(this.$children);
+        console.log(this.$refs.aaa.name);
+      }
+    },
+    components: {
+      cpn: {
+        template: '#cpn',
+        data(){
+          return {
+            name:'chang ming zi'
+          }
+        },
+        methods: {
+          printf(){
+            console.log('fff')
+          }
+        }
+      }
+    }
+  })
+</script>
+</body>
+</html>

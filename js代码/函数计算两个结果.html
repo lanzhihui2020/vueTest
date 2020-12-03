@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数计算两个结果</title>
+<!--    <script>-->
+<!--        function myFunction(a,b) {-->
+<!--            return a*b;-->
+<!--        }-->
+<!--        console.log(myFunction(3,4));-->
+<!--    </script>-->
+</head>
+<body>
+<p>在后面显示一下函数计算的值</p>
+<p id="demo">在这行显示值</p>
+<script>
+    function myFunction(a,b){
+        return a*b;
+    }
+    document.getElementById('demo').innerHTML = myFunction(4,5);
+</script>
+</body>
+</html>

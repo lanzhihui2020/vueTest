@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉再来一次</title>
+    <style>
+        .dropbtn {
+            background-color: #00ff00;
+            padding:16px;
+            border: none;
+            font-size: 16px;
+            /*设置指针形状为手指*/
+            cursor: pointer;
+            color: white;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            position: absolute;
+            /*改为不可见*/
+            display: none;
+            min-width: 160px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        .dropdown-content a {
+            text-decoration: none;
+
+            color: black;
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #109e10;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a:hover {
+           background-color: #666666;
+        }
+    </style>
+</head>
+<body>
+<div class="dropdown">
+    <button class="dropbtn">下拉菜单</button>
+    <div class="dropdown-content">
+        <a href="#1">第一个下拉菜单</a>
+        <a href="#2">第二个下拉菜单</a>
+        <a href="#3">第三个下拉菜单</a>
+    </div>
+</div>
+</body>
+</html>

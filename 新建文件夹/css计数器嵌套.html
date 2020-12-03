@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css计数器嵌套</title>
+    <style>
+        body {
+            counter-reset: text1 0;
+        }
+        h1 {
+            counter-reset: text2 0;
+        }
+        h1::before {
+            counter-increment: text1 1;
+            content: counter(text1)"、";
+        }
+        h3::before {
+            counter-increment: text2 1;
+            content: counter(text1)"."counter(text2)"、";
+        }
+    </style>
+</head>
+<body>
+<h1>标题一</h1>
+<h3>小标题一</h3>
+<h3>小标题二</h3>
+<h3>小标题三</h3>
+
+<h1>标题二</h1>
+<h3>小标题一</h3>
+<h3>小标题二</h3>
+<h3>小标题三</h3>
+
+<h1>标题三</h1>
+<h3>小标题一</h3>
+<h3>小标题二</h3>
+<h3>小标题三</h3>
+</body>
+</html>

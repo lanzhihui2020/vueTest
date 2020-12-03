@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<h2  :class="[active,isCl]">{{message}}</h2>
+<h2  :class="mesa()">{{message}}</h2>
+</div>
+<script src="vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: '你好啊',
+      active: 'aaa',
+      isCl: 'falbbbse'
+    },
+  methods: {
+      mesa: function () {
+        return [this.active , this.isCl];
+      }
+  }
+  })
+</script>
+</body>
+</html>

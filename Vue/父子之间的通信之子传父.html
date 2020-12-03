@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn @itemclick="cpmclick"></cpn>
+</div>
+<template id="cpn">
+  <div>
+    <button v-for="item in categaries"
+    @click="btnclick(item)">{{item.name}}</button>
+  </div>
+</template>
+<script src="vue.js"></script>
+<script>
+  const cpn = {
+    template: '#cpn',
+    data() {
+      return {
+        categaries: [
+          {id: '111', name: 'shouji'},
+          {id: '222', name: 'diaonao'},
+          {id: '333', name: 'ipad'},
+        ]
+      }
+    },
+    methods: {
+      btnclick(item){
+        console.log(111)
+        this.$emit('itemclick',item)
+      }
+    }
+  }
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'nihao',
+    },
+    components: {
+      cpn
+    },
+    methods: {
+      cpmclick(item) {
+        console.log('333',item)
+      }
+    }
+  })
+</script>
+</body>
+</html>

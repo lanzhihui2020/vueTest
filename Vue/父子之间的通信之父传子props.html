@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<cpm :cmovies="movies" :cmessage="message"></cpm>
+</div>
+<template id="tem">
+<div>
+  <ul>
+    <li v-for="item in cmovies">{{item}}</li>
+  </ul>
+  <p>{{cmessage}}</p>
+
+</div>
+</template>
+<script src="vue.js"></script>
+<script>
+  const cpm = {
+    template: '#tem',
+    //这是用数组形式
+    //props: ['cmovies','cmessage']
+    props: {
+      cmovies: Array,
+      cmessage: {
+        //类型
+        type: String,
+        //默认值
+        default: 000000,
+        //表示一定得有
+        required: true,
+      }
+    }
+  }
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'nihao',
+      movies: ['haiwang','haizeiwang','xinjichuangyue']
+    },
+    components :{
+      cpm
+    }
+  })
+</script>
+</body>
+</html>

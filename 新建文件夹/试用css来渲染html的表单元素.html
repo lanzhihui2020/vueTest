@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用css渲染表单元素</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        div.box {
+            width: 380px;
+            height: 340px;
+            background-color: #f2f2f2;
+            margin: 100px auto;
+            padding: 4px 18px;
+        }
+        input[type=text], select {
+            display: inline-block;
+            padding: 11px 20px;
+            margin: 8px 0px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            width: 90% ;
+        }
+        select {
+            width: 100%;
+        }
+        input[type=submit] {
+            background-color: #4caf50;
+            padding: 11px 20px;
+            margin-top: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+        input[type=submit]:hover {
+            background-color: #109e10;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <form>
+        First Name<input type="text" value="Your name...">
+        Last Name<input type="text" value="Last name...">
+        Country<select>
+        <option>Australia</option>
+        <option>America</option>
+        <option>Japan</option>
+    </select>
+    <input type="submit" value="Submit">
+    </form>
+
+</div>
+</body>
+</html>

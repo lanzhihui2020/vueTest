@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>huanfu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-image: url("u=657604867,2600784396&fm=26&gp=0.jpg") ;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .baidu {
+            overflow: hidden;
+            width: 700px;
+            margin: 70px auto;
+            padding-top: 3px;
+        }
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            list-style: none;
+            cursor: pointer;
+        }
+        ul img {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<ul class="baidu">
+    <li><img src="u=657604867,2600784396&fm=26&gp=0.jpg" ></li>
+    <li><img src="u=2567670815,24101428&fm=26&gp=0.jpg" ></li>
+    <li><img src="u=3807427310,283445384&fm=26&gp=0.jpg"></li>
+</ul>
+<script>
+    var hf = document.querySelector('.baidu').querySelectorAll('img');
+    console.log(hf);
+    //选中body区域
+    var bd = document.body;
+    for (var i = 0; i < hf.length; i++) {
+            // for (var j = 0; j < hf.length; j++) {
+            //     bd.style.backgroundImage = "url('')";
+            // }
+
+        //要加个style才能改变 后面的URL不用this要加“”
+            hf[i].onclick = function () {
+                bd.style.backgroundImage = 'url('+this.src+')';
+            }
+    }
+</script>
+</body>
+</html>

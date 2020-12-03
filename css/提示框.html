@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提示框</title>
+    <style>
+        .toolip {
+            display: inline-block;
+            position: relative;
+            border-bottom: 1px dotted black;
+        }
+
+        .toolip .toolitiptext {
+            visibility: hidden;
+              background-color: black;
+              width: 120px;
+              text-align: center;
+             color: white;
+            position: absolute;
+            /*圆角*/
+            border-radius: 6px;
+            z-index: 1;
+            padding: 5px 0;
+        }
+
+        .toolip:hover .toolitiptext {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<div class="toolip">拥有隐藏文字
+    <span class="toolitiptext">文本提示信息</span>
+</div>
+<!--快速写代码-->
+<!--ul>li#$*7-->
+</body>
+</html>

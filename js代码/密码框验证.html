@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>密码框验证</title>
+    <style>
+        .message {
+            display: inline-block;
+            color: #00eeee;
+            font-size: 12px;
+        }
+        .err {
+            color: red;
+
+        }
+    </style>
+</head>
+<body>
+<p>表单验证</p>
+<input type="password">
+<p class="message">请输入6-12位数字</p>
+<script>
+    var inp = document.querySelector('input');
+    //document.getElementsByTagName
+    var mes = document.querySelector('.message');
+    inp.onblur = function () {
+    if (inp.value.length <6 || inp.value.length>12){
+        mes.className = 'message err';
+        mes.innerHTML = '输入的数字长度错误';
+    }else {
+
+    }
+
+}
+</script>
+</body>
+</html>

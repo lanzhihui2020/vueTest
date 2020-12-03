@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看字符串中最多的字符</title>
+    <script>
+        var str ='asdfqwdscvadfwervxvca';
+        var o = {};
+        for (var i = 0;i<str.length;i++){
+            var chars = str.charAt(i);
+            if (o[chars]){
+                o[chars]++;
+            }else{
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0;
+        var xChar = '';
+        for(var k in o){
+            if (o[k]>max){
+                max = o[k];
+                xChar = k;
+            }
+        }
+        console.log(max);
+        console.log(xChar);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

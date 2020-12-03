@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏</title>
+    <style>
+        h1.hidden{
+            visibility: hidden;
+        }
+        h2.hidden{display: none;}
+    </style>
+</head>
+<body>
+<h1>这不是隐藏</h1>
+<!--这个隐藏还会占用能够空间-->
+<h1 class="hidden">这个是隐藏</h1>
+<!--这个隐藏不会占用空间-->
+<h2 class="hidden">这个也是隐藏</h2>
+</body>
+</html>

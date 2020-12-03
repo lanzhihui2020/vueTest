@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输入输出</title>
+    <script>
+        var year = prompt('请输入你的出生年份');//取过来的是字符串类型的
+        console.log(typeof year)
+        year = parseInt(year);
+        console.log(typeof year);
+        var nowAge = 2020 - year;//但这边有 - 号可以直接转换了
+        alert(nowAge);
+
+        var number1 = prompt('请输入第一个数字');
+        number1 = parseInt(number1);
+        var number2 = prompt('请输入第二个数字');
+        number2 = parseInt(number2);
+        var resutlt = number1+number2;
+        alert('结果是：'+resutlt);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

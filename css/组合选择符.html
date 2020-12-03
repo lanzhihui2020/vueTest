@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style>
+        /*!*后代选择器 所有div的子集*!*/
+        /*div p {*/
+        /*    background-color: green;*/
+        /*}*/
+        /*!*子元素选择器只能下一级是p*!*/
+        /*div>p {*/
+        /*    background-color: blue;*/
+        /*}*/
+        /*选取在div元素之后的第一个p元素*/
+        /*div+p {*/
+        /*    background-color: red;*/
+        /*}*/
+        div~p {
+            background-color: magenta;
+        }
+    </style>
+</head>
+<body>
+<!--<div><p>这个颜色是</p></div>-->
+<!--<div><span><p>这个颜色是</p></span></div>-->
+<!--<div><P>div+p中的div这个不会变色，是第一个元素</P></div>-->
+<!--<p>这个div之后的第一个段落才会变色</p>-->
+<div><p>div~p中p不会改变</p></div>
+<p>之后的所有都会改变</p>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导航栏切换</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .nav {
+            width: 400px;
+            margin: 100px auto;
+        }
+        .nav li {
+            float: left;
+            padding-right: 10px;
+        }
+        .nav .red {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        .model {
+            width: 400px;
+            margin: 10px auto;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <!--设置默认的-->
+        <li class="red">商品介绍</li>
+        <li>规格与包装</li>
+        <li>售后保障</li>
+        <li>商品评价</li>
+    </ul>
+</div><br />
+<!--设置默认的display:block-->
+<div class="model" style="display: block">商品介绍模块内容</div>
+<div class="model">规格与包装模块内容</div>
+<div class="model">售后保障模块内容</div>
+<div class="model">商品评价模块内容</div>
+<script>
+    var navs = document.querySelector('.nav').querySelectorAll('li');
+    var models = document.querySelectorAll('.model');
+    for (var i = 0;i < navs.length;i++){
+        //添加setAttribute自定义属性：用data就是自定义的属性
+        navs[i].setAttribute('data-index', i);
+        navs[i].onmouseenter =function () {
+            //排他算法，去掉所有，在添加自己，避免显示出不需要的部分
+            for (var i = 0;i < navs.length;i++){
+                navs[i].className = '';
+            }
+            //添加自己
+            this.className = 'red';
+             for (var j = 0;j < models.length; j++){
+                models[j].style.display = 'none';
+             }
+             //取出定义好的属性getAttribute并赋值
+            var index = this.getAttribute('data-index');
+            models[index].style.display = 'block';
+            console.log(index);
+        }
+    }
+</script>
+</body>
+</html>

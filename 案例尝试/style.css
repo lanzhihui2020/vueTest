@@ -1,0 +1,60 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+.box {
+    width: 800px;
+    margin: 0px auto;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.head {
+    height: 40px;
+    background-color: green;
+}
+.head .logo {
+    float: left;
+    height: 40px;
+    width: 100px;
+    margin: 0px 20px;
+    margin-left: 0px;
+    background-color: bisque;
+}
+.head .nav {
+    float: left;
+    height: 40px;
+    width: 350px;
+}
+.nav li {
+    float: left;
+    height: 40px;
+    margin: 5px 0px 5px 10px;
+}
+.head .textbox1 {
+    float: left;
+    width: 190px;
+    height: 40px;
+    margin-left: 30px;
+}
+.textbox1 input {
+    float: left;
+    border: 1px solid #65c4d4 ;
+    border-right: none;
+    width: 120px;
+    height: 38px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #888888;
+}
+.textbox1 button {
+    float: left;
+    background-color: aqua;
+    width: 40px;
+    height: 40px;
+    border: 0px;
+}

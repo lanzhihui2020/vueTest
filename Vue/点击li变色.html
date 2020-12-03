@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+<div id="app">
+<!--  取出索引，根据索引变化，绑定：以索引值绑定，相等为true-->
+  <li v-for="(item,index) in movies"
+      :class="{red:currentIndex===index}" @click="liClick(index)">{{item}}</li>
+
+
+
+</div>
+<script src="vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      movies: ['星际创越','海王','盗梦空间','葫芦娃'],
+      currentIndex: 0,
+    },
+    methods: {
+      //带参数才能进行切换
+      liClick(index){
+        this.currentIndex = index;
+      }
+    }
+  })
+</script>
+</body>
+</html>

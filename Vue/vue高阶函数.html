@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue高阶函数</title>
+</head>
+<body>
+<script src="vue.js"></script>
+<script>
+  const num1 = [10,30,222,11,152,55,101];
+  // let newNum = num1.filter(function (n) {
+  //   return n<100;
+  // })
+  // let newNum2 = newNum.map(function (n) {
+  //   return n * 2;
+  // })
+  // let newNum3 = newNum2.reduce(function (preValue,n) {
+  //   return preValue+n;
+  // },0)
+
+  //使用箭头函数
+  let newNum = num1.filter(n => n < 100).map(n => n * 2).reduce((pre,n) => pre + n);
+  console.log(newNum);
+  // console.log(newNum2);
+  // console.log(newNum3);
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文本</title>
+    <style>
+        body {
+            color: red;
+        }
+
+        h1 {
+            color: green;
+            text-align: center;
+        }
+
+        p.gg {
+            color: yellow;
+            text-align: right;
+        }
+
+        /*把每行后面多余的空白补齐*/
+        p.two {
+            text-align: justify;
+        }
+
+        /*取消链接下划线*/
+        a {
+            text-decoration: none;
+        }
+
+        /*装饰文字*/
+        h1 {
+            text-decoration: overline;
+        }
+
+        h2 {
+            text-decoration: line-through;
+        }
+
+        h3 {
+            text-decoration: underline;
+        }
+
+        /*文字转换*/
+        p.uppercase {
+            text-transform: uppercase;
+        }
+
+        p.lowercase {
+            text-transform: lowercase;
+        }
+
+        p.capitalize {
+            text-transform: capitalize;
+        }
+
+        /*开头缩进*/
+        p.news {
+            text-indent: 30px;
+        }
+
+        /*指定字符之间的距离*/
+        h3 {
+            letter-spacing: 6px;
+        }
+
+        h4 {
+            letter-spacing: 2px;
+        }
+
+        /*指定行间的距离*/
+        p.small {
+            line-height: 60%
+        }
+
+        p.big {
+            line-height: 200%
+        }
+        /*单词间的缩进量*/
+        p.word{word-spacing: 90px;}
+        /*图像对齐方式*/
+        img.top{vertical-align: text-top;}
+        img.bottom{vertical-align: text-bottom;}
+
+    </style>
+</head>
+<body>
+<h1>h1已修改颜色</h1>
+<p>p没有修改颜色</p>
+<p class="gg">class=gg,已修改的颜色</p>
+<p class="two">把每行后面多余的空白补齐Shanghai is the largest city by population in the People's Republic of China (PRC) and the
+    largest city proper by population in the world. </p>
+<p>取消链接下划线<a href="www.baidu.com">百度</a></p>
+<h1>文字形式1</h1>
+<h2>文字形式2</h2>
+<h3>文字形式3</h3>
+<p class="uppercase">quan bu 大 xie</p>
+<p class="lowercase">quan bu 小 xie</p>
+<p class="capitalize">kai tou da xie</p>
+<p class="news">开头可以进行缩进</p>
+<h3>每个字之间的距离1</h3>
+<h4>每个字之间的距离2</h4>
+<p class="small">这是一个更小的行</p>
+<p class="small">这是一个更小的行</p>
+<p class="small">这是一个更小的行</p>
+<p class="big">这是一个更大的行</p>
+<p class="big">这是一个更大的行</p>
+<p class="word">用单词才有缩进量zhi neng yong dan ci</p>
+<p >一个<img src="cat.jpg">默认对齐的图像 </p>
+<p >一个<img class="top" src="cat.jpg">top对齐的图像 </p>
+<p >一个<img class="bottom" src="cat.jpg">bottom对齐的图像 </p>
+
+</body>
+</html>

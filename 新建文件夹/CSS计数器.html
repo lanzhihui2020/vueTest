@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计数器</title>
+    <style>
+       h1 {
+            /*counter计数，初始 开始值*/
+            counter-reset: text 0;
+        }
+        h3::before {
+            /*递增 需要递增的递增器 递增的值*/
+            counter-increment: text 1;
+            /*在开始标签后插入 函数值*/
+            content: "1." counter(text)"、";
+        }
+    </style>
+</head>
+<body>
+<h2>计算h3出现的值</h2>
+<h3>zheshi</h3>
+<h3>zheshi</h3>
+<h1>重置了？</h1>
+<h3>zheshi</h3>
+<h3>zheshi</h3>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn :number1="num1" :number2="num2"
+       @changenum1="changenewnum1" ></cpn>
+</div>
+<template id="cpn">
+  <div>
+    <h4>number1:{{number1}}</h4>
+    <h4>newnumber1:{{newnumber1}}</h4>
+    <input type="text" :value="newnumber1" @input="getnum1 ">
+    <h4>number2:{{number2}}</h4>
+    <h4>newnumber2:{{newnumber2}}</h4>
+    <input type="text" :value="newnumber2" @input="newnumber2=$event.target.value ">
+  </div>
+</template>
+<script src="vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      num1: 1,
+      num2: 2
+    },
+    methods: {
+      changenewnum1(value){
+        this.num1 = value * 1;
+      }
+    },
+    components: {
+      cpn: {
+        template: '#cpn',
+        props: {
+          number1: Number,
+          number2: Number
+        },
+        data(){
+          return {
+            newnumber1:this.number1,
+            newnumber2:this.number2
+          }
+        },
+        methods: {
+          getnum1(event){
+             this.newnumber1 = event.target.value;
+             this.$emit('changenum1',this.newnumber1)
+          },
+        }
+      }
+    },
+  })
+</script>
+</body>
+</html>

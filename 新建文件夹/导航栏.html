@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页布局</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        .header {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+        }
+        .topnav {
+            background-color: #333333;
+        }
+        .topnav a {
+            display: inline-block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .topnav a:hover {
+            background-color: #dddddd;
+            color: black;
+        }
+        .colum {
+            width: 33.3%;
+            float: left;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+            .colum {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1 class="header">头部区域</h1>
+<div class="topnav">
+    <a href="#" target="_blank">链接</a>
+    <a href="#" target="_blank">链接</a>
+    <a href="#" target="_blank">链接</a>1
+</div>
+<div class="row">
+    <div class="colum">
+        <h1>第一列</h1>
+        <p>di yi ye de nei rong.</p>
+    </div>
+    <div class="colum">
+        <h1>第一列</h1>
+        <p>di yi ye de nei rong.</p>
+    </div><div class="colum">
+    <h1>第一列</h1>
+    <p>di yi ye de nei rong.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器权重</title>
+    <style>
+        /*继承优先级为 !important>行内选择器style>id选择器>类选择器>元素选择器>继承*/
+        #jc {
+            color: #00eeee!important;
+
+        }
+
+        p {
+            color: lime;
+        }
+        /*权重叠加*/
+        /*ul li {} 权重是 0001+0001=0002*/
+        /*.nav li {} 权重是 0010+0001        */
+    </style>
+</head>
+<body>
+<div id="jc" style="color: #FFA500">
+    这里是重要的哪一个
+<!--继承的权重为0-->
+    <p>这里还是p自身的值</p>
+</div>
+</body>
+</html>

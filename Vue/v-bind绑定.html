@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <img v-bind:src="image" alt="">
+</div>
+<script src="vue.js"></script>
+<script>
+  var bd = new Vue({
+    el: '#app',
+    data: {
+      image: "//m.360buyimg.com/mobilecms/s150x150_jfs/t1/146350/29/713/33082/5ee73d9fE1ae995ad/0ec365679efbf615.png!q70.jpg.dpg"
+    }
+    })
+</script>
+</body>
+</html>

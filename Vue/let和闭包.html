@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<script>
+  var arr = document.getElementsByTagName('button');
+  for (var i = 0;i<arr.length;i++){
+    (function(i){ //这个是函数的i，两个i不同
+    arr[i].addEventListener('click',function () {
+      console.log('第' + i + '个按钮被点击');
+    })
+    })(i) //这个是var的i
+  }
+</script>
+</body>
+</html>

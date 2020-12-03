@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang=zh-CN>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<from action="">
+    <b>账号：</b>
+    <input type="text" name="firstname"><br>
+    <b>密码：</b>
+    <input type="text" name="lastname">
+</from><br/>
+<p><strong>单选按钮</strong></p>
+<from action="">
+       <!--设置成同一个名字才能单选 单选按钮-->
+    <input type="radio" name="sex" value="male" >male<br />
+    <input type="radio" name="sex" value="female">female<br />
+</from>
+<p><strong>复选按钮框</strong></p>
+<from action="">
+<input type="checkbox" name="vehicle">I have a bike<br />
+    <input type="checkbox" name="vehicle">I bave a car<br />
+</from><br/>
+<p>简单的下拉列表</p>
+<form action="">
+    <select name="cars">
+        <option value="volvo">volvo</option>
+        <option value="saab">volvo</option>
+<!--        这是把Fiat设为预选的，但失败了-->
+        <option value="fiat" selected >volvo</option>
+        <option value="audi">volvo</option>
+    </select>
+</form>
+<p>文本框</p>
+<textarea row="15" col="20">这是一个文本框</textarea>
+<p>带框的表单</p>
+<form action="">
+    <!--这是框-->
+    <fieldset>
+        <!--这是框边的字-->
+        <legend> Personal information:</legend>
+        Name:<input style="text" size="15" value="your name"><br/>
+        E-mail:<input style="text" size="13" value="your e-mail"><br/>
+        Date of birth:<input style="text" size="10" value="your birthday">
+    </fieldset>
+</form>
+<p>选定好一个值得单选按钮</p>
+<form action="">
+    <input type="radio" name="radio1" value="fale">fale<br/>
+    <input type="radio" name="dadio1" value="female" checked="checked">female<br/>
+    <input type="button" name="button1" value="提交"></input>
+</form>
+</body>
+</html>

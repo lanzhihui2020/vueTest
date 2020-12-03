@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单2</title>
+    <style>
+        .dropbtn {
+            background-color: #109e10;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border:  none ;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+        }
+        .dropdown-content {
+            position: absolute;
+            display: none;
+            min-width: 160px;
+            background-color: #666666;
+
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #b1a3a3;
+        }
+        .dropdown:hover .dropdown-content {
+
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+    </style>
+</head>
+<body>
+<div class="dropdown">
+    <button class="dropbtn">下拉菜单</button>
+    <div class="dropdown-content">
+        <a href="#1">第一个内容</a>
+        <a href="#2">第二个内容</a>
+        <a href="#3">第三个内容</a>
+    </div>
+</div>
+</body>
+</html>

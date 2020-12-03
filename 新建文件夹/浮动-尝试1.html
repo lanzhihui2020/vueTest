@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动float</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        .box {
+            width: 881px;
+            height: 200px;
+            background-color: lime;
+            margin: 0px auto;
+        }
+        .box1 {
+            float: left;
+            height: 200px;
+            width: 300px;
+            background-color: magenta;
+        }
+        .box li {
+            list-style: none;
+        }
+        .box1 li {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+         a {
+            text-decoration: none;
+            color: black;
+        }
+        .box1 a:hover {
+            color: white;
+        }
+        .box2 {
+            float: left;
+            height: 200px;
+            width: 581px;
+            background-color: #00eeee;
+        }
+        .box2 li{
+            float: left;
+            width: 140px;
+            height: 200px;
+            margin-right: 7px;
+            background-color: lime;
+        }
+        .box2 .last {
+            margin-right: 0px;
+        }
+        img {
+            width: 100%;
+        }
+        p {
+            text-align: center;
+            height: 60px;
+            margin: 10px 11px 5px 11px
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box1">
+        <ul>
+            <li><a href="#">导航1</a></li>
+            <li><a href="#">导航2</a></li>
+            <li><a href="#">导航3</a></li>
+            <li><a href="#">导航4</a></li>
+        </ul>
+    </ul>
+    </div>
+    <div class="box2">
+        <ul>
+            <li>
+                <a href="#">
+                <img src="cat.jpg">
+                    <p>
+                        cat!
+                    </p>
+                </a>
+            </li>
+            <li><a href="#"><img src="cat.jpg"> </a> </li>
+            <li><a href="#"><img src="cat.jpg"> </a> </li>
+            <li class="last"><a href="#"><img src="cat.jpg"> </a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

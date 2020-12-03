@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证输入</title>
+</head>
+<body>
+<h3>ji xu shu ru</h3>
+<script>
+    function adex() {
+        x = document.getElementById('demo').value;
+        // 这个才能判断是否连续空格
+        if (x.replace(/(^\s*)|(\s*$)/g,"")==""|| isNaN(x))
+            alert("输入的不是数字")
+        else
+            alert("deng lu cheng gong")
+    }
+</script>
+<input type="text" id="demo">
+<button type="button" onclick="adex()">点击这里</button>
+</body>
+</html>

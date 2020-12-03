@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标移动表格行变色</title>
+    <style>
+        * {
+            display: 0;
+            margin: 0;
+        }
+        .dyg {
+            width: 400px;
+            margin: 40px auto;
+        }
+        .dyg table {
+
+        }
+        .dyg thead {
+            background-color: #00eeee;
+        }
+        .bg {
+            background-color: red;
+        }
+    </style>
+</head>
+<body class="dyg">
+<div>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>表头1</th>
+                <th>表头2</th>
+                <th>表头3</th>
+                <th>表头4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    var tds = document.querySelector('tbody').querySelectorAll('tr');
+    for (var i = 0;i<tds.length;i++){
+        //鼠标移动时变化  改变类名
+        tds[i].onmouseover = function () {
+             this.className = 'bg';
+        }
+        tds[i].onmouseout = function () {
+            this.className = '';
+        }
+    }
+</script>
+</body>
+</html>

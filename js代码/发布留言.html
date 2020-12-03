@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布留言</title>
+    <style>
+        * {
+            padding: 0;
+
+        }
+        textarea {
+            height: 70px;
+        }
+        li {
+            background-color: lime;
+            width: 400px;
+            font-size: 20px;
+        }
+        li a {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<textarea></textarea>
+<button>发布</button>
+<ul>
+
+</ul>
+<script>
+    var btn = document.querySelector('button');
+    var ul = document.querySelector('ul');
+    var textarea = document.querySelector('textarea');
+    btn.onclick = function () {
+        //验证是否有值
+        if (textarea.value==''){
+            alert("输入的值为空");
+            return false;
+        }else{
+            //创建一个元素
+            var li = document.createElement('li');//给元素一个值
+            li.innerHTML = textarea.value+'<a href = "javascript:;">删除</a>';
+            //把元素添加进去 要是加到前面用insertBefore()
+            //ul.appendChild(li);
+            ul.insertBefore(li,ul.children[0]);
+            //不知道为啥写在上一个函数里，因为要生成后才能进行删除操作？
+            var as = document.querySelectorAll('a');
+            for (var i = 0;i < as.length;i++){
+                as[i].onclick = function () {
+                    //删除是父元素下的子元素，this.parentNode是ul里的子元素li
+                    ul.removeChild(this.parentNode);
+                    console.log(111);
+                }
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

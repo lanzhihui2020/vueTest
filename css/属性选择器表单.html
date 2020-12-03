@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器表单</title>
+    <style>
+
+
+    input[type=text],select {
+        width: 100%;
+        display: inline-block;
+        padding: 18px 26px;
+        border:1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+        input[type="submit"] {
+            background-color: lime;
+            text-align: center;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: rgba(76, 175, 80);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        First Name <input type="text" value="Your name..">
+        Last Name <input type="text" value="Your last name..">
+        Country
+        <select>
+        <option selected="selected">Australia</option>
+        <option >Japan</option>
+        <option >America</option>
+    </select>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+       .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            background-color: #f9f9f9;
+
+        }
+       .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<h3>下拉菜单尝试</h3>
+<div class="dropdown"><span>这里面有一个下拉菜单</span>
+<div class="dropdown-content">
+    <p>这里面buzhi有一个下拉菜单</p>
+    <p>这里面buzhi有两个下拉菜单</p></div>
+</div>
+</body>
+</html>

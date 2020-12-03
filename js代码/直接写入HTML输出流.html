@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直接写入HTML输出流</title>
+
+</head>
+<body>
+<p>
+    下面直接写入输出
+</p>
+<script>
+    document.write("<h1>Mo ming qi miao</h1>")
+    document.write("<p>这是一个段落，经过了script</p>")
+    function dire(){
+    x = document.getElementById('demo');//选出要改变的值
+    x.innerHTML = "Hello JavaScript";  //改变值
+    }
+</script>
+<button type="button" onclick="alert('惊喜！')">点我</button>
+<p id="demo">当点击下面按钮，将会改变这个值</p>
+<button type="button" onclick="dire()">点我改变</button>
+</body>
+</html>

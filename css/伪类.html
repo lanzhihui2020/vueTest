@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类</title>
+    <style>
+        a:link {color:#000000;}
+        a:visited {color:#00ff00;}
+        a:hover {color:#ff00ff;}
+        a:active {color: #0000ff;}
+        /*伪类和css一起用*/
+        a.red:visited { color: red;}
+        p:first-child { color: #FFD700;}
+    </style>
+</head>
+<body>
+<!--p放在链接后面不会改变，a可能也含有p-->
+<p>伪类first-child第一个元素，会改变</p>
+<p>第二个，不会改变</p>
+<a class="red" href="#" target="_blank">这是一个链接</a><br/>
+
+
+
+</body>
+</html>

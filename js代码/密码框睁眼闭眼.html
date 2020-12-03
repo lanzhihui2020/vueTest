@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>密码框睁眼闭眼</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        .box {
+            position: relative;
+            width: 400px;
+            margin: 100px auto;
+            border-bottom: 1px solid #ff00ff;
+        }
+        .box input {
+            width: 370px;
+            height: 30px;
+            margin: 0px;
+            border: 0;
+            outline: none;
+        }
+        .box img {
+            position: absolute;
+            top:15px;
+            right: 3px;
+            width: 19px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <label for="eye">
+    <img src="close.jpg" id="eye">
+    </label>
+    <input type="password" id="pwd">
+
+<script>
+    var pwd = document.getElementById('pwd');
+    var eye = document.getElementById('eye');
+    var time = 0
+    eye.onclick = function () {
+        if (time == 0){
+            pwd.type ='text';
+            eye.src = 'open.jpg';
+            time = 1
+        }else{
+            pwd.type= 'password';
+            eye.src = 'close.jpg';
+            time = 0;
+        }
+
+
+    }
+</script>
+</div>
+</body>
+</html>

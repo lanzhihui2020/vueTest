@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重</title>
+    <script>
+        function uniqe(arr) {
+            var newArr =[];
+            for (var i = 0;i <arr.length;i++){
+                //旧数组遍历新数组
+              if (newArr.indexOf(arr[i]) === -1){
+                newArr.push(arr[i]);
+              }
+            }
+            return newArr;
+        }
+        var demo = uniqe(['1','qq','33','a','bb','bb','qq',1]);
+        console.log(demo);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

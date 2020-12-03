@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水平导航栏float</title>
+    <style>
+        ul {
+            /*overflow溢出时隐藏,不加不会显示背景*/
+            list-style-type: none;
+            background-color: #00eeee;
+            padding: 0px;
+            margin: 0px 10px;
+            overflow: hidden;
+        }
+        li {
+           float:left
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            margin: 0px 10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="#home">主页</a></li>
+    <li><a href="#new">新闻</a></li>
+    <li><a href="#contact">联系</a></li>
+    <li><a href="#about">关于</a> </li>
+</ul>
+</body>
+</html>

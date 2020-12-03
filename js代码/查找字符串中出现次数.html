@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找字符串中出现次数</title>
+    <script>
+        var demo = "fasgqearsdfaedfsawe";
+        var text = demo.indexOf('a');
+        var num = 0;
+        var fis = '';
+        while (text !== -1){
+            console.log(text);
+            num++;
+            fis += text+'\t';
+            text = demo.indexOf('a',text+1);
+        }
+        console.log('出现的位置是'+fis);
+        // for (var i = 0; i<fis.length;i++){
+        //     console.log(fis[i]);
+        // }
+        console.log('出现的次数是'+num);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

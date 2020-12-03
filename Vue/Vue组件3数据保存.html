@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <!--下面只是模板，值还是得写在app中-->
+  <cpn></cpn>
+</div>
+<template id="model">
+  <div>
+    <h4>总数是：{{count}}</h4>
+    <button @click="addMoreOne">加1</button>
+    <button @click="delMore">减1</button>
+  </div>
+</template>
+
+<script src="vue.js"></script>
+<script>
+  Vue.component('cpn',{
+    template: '#model',
+    data(){
+      return{
+        count: 0
+      }
+    },
+    methods: {
+      addMoreOne(){
+        this.count++;
+        console.log(111);
+      },
+      delMore(){
+        this.count--;
+        console.log(111);
+      }
+    }
+  })
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'xiix'
+    }
+  })
+</script>
+</body>
+</html>

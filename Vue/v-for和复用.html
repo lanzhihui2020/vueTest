@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <div>
+    <span v-if="isTrue" >
+    <label for="zhanghao">账号登录</label>
+    <input  type="text" id="zhanghao" key="111" placeholder="用户登录">
+    <button @click="getRes()">切换邮箱</button>
+      </span>
+    <span v-else>
+    <label for="youxiang">邮箱登录</label>
+    <input type="text" id="youxiang" key="111" placeholder="邮箱登录">
+    <button @click="getRes()">切换邮箱</button>
+      </span>
+  </div>
+</div>
+<script src="vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      isTrue: true,
+    },
+    methods: {
+      getRes(){
+        return this.isTrue = !this.isTrue;
+      }
+    }
+  })
+</script>
+</body>
+</html>

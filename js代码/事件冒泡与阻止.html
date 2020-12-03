@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件冒泡与阻止</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            background-color: magenta;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div>1
+</div>
+<script>
+    var div = document.querySelector('div');
+    var bd = document.body;
+    var html = document.documentElement;
+    //要阻止得先有事件主体e
+    div.addEventListener('click',function (e) {
+        alert(111);
+        //阻止冒泡
+        e.stopPropagation();
+    })
+    bd.addEventListener('click',function () {
+        alert(222);
+    })
+    html.addEventListener('click',function () {
+        alert(333);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>覆盖文档</title>
+</head>
+<body>
+<script>
+    document.write("首先输出");
+</script>
+<p>请点击这</p>
+<br/>
+<input type="button" onclick="test()" value="调用函数"/>
+<script>
+    function test(){
+        document.write("覆盖输出:");
+        document.write(Date());
+    }
+</script>
+</body>
+</html>

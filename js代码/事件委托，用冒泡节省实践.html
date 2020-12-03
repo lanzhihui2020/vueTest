@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>事件委托，用冒泡节省</title>
+</head>
+<body>
+<ul>
+    <li>尝试委托1</li>
+    <li>尝试委托2</li>
+    <li>尝试委托3</li>
+    <li>尝试委托4</li>
+</ul>
+<script>
+    var ul = document.querySelector('ul');
+    var lis = document.querySelectorAll('li');
+    //利用冒泡实现
+    ul.addEventListener('click',function (e) {
+        for (var i = 0;i < lis.length;i++){
+            lis[i].style.backgroundColor = '';
+        }
+        //用target可以进行精准定位
+        e.target.style.backgroundColor = 'red';
+    })
+</script>
+</body>
+</html>

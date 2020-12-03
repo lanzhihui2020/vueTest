@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        boc {
+            width: 200px;
+            height: 200px;
+            background-color: magenta;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<ul>
+    <li>dd1</li>
+    <li>dd2</li>
+    <li>dd3</li>
+</ul>
+<script>
+    var divs = document.querySelectorAll('div');
+    //添加事件（event）主体，target是被点击的主体
+    divs[0].onclick = function (event) {
+        var tar = event.target;
+        //这两个在这里是一样的效果
+        var tar1 = this;
+        console.log(tar);
+        console.log(tar1);
+    }
+    var ul = document.querySelector('ul');
+    ul.addEventListener('click',function (event) {
+        var tars = event.target;
+        var tars1 = this;
+        //这里输出的是li，点击的主体
+        console.log(tars);
+        //这里输出的是ul.绑定的主体
+        console.log(tars1);
+    })
+</script>
+</body>
+</html>

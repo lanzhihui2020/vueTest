@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>innerHtml</title>
+
+</head>
+<body>
+
+    <button id = 'ldh' src="" title="ldh">daanniu</button>
+    <button id = 'zxy' src="" title="zxu">daannou</button><br />
+    <img src="u=2567670815,24101428&fm=26&gp=0.jpg">
+    <img src="">
+
+<script>
+     var ldh = document.getElementById('ldh');
+     var zxy = document.getElementById('zxy');
+     var img = document.querySelector('img');
+     ldh.onclick = function () {
+            img.src = "u=3807427310,283445384&fm=26&gp=0.jpg";
+            img.title = 'ldh';
+     }
+     zxy.onclick = function () {
+         img.src = "u=2567670815,24101428&fm=26&gp=0.jpg";
+         img.title = "zxy";
+     }
+
+</script>
+</body>
+</html>

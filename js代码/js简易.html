@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js简易</title>
+    <script>
+        // var moneySum = 100;
+        // var num = prompt('请输入您要的操作：'+'\n'+'1.存钱'+'\n'+'2.取钱'+'\n'+'3.显示余额'+'\n'+'4.退出')
+        // switch (num) {
+        //     case 1:
+        //         moneySum += num;
+        //         break;
+        // }
+        // function f() {
+        //     console.log('111');
+        // }
+        //
+        // console.log(f());
+        // 1.创建对象的第一种方法
+        // var dog = {
+        //     name: 'coco',
+        //     type: 'alex',
+        //     name: 5,
+        //     color: 'red',
+        //     jineng: function () {
+        //         console.log('wangwangwang');
+        //         console.log('movic');
+        //     }
+        // }
+        // console.log(dog.name);
+        // console.log(dog['type']);
+        // //这里不用log了，会有undefined
+        // dog.jineng();
+        //2.创建对象的第二种方法
+        // var per = new Object();
+        // per.name = 'ninren';
+        // per.sex = 'nan';
+        // per.age = 18;
+        // per.skill = function () {
+        //     console.log('i can yinfens');
+        // }
+        // console.log(per.name)
+        // console.log(per['sex'])
+        // per.skill();
+        //3.创建对象的第三种方法
+        function hero(uname,type,blood) {
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(style) {
+                console.log(style);
+            }
+        }
+        var lp = new hero('lianpo','poorer',5000);
+        console.log(lp.name);
+        lp.attack('jincheng');
+        var hy = new hero('houyi','sheshou',2000)
+        console.log(hy['type']);
+        hy.attack('yuancheng');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

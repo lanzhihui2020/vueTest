@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js案例if控制</title>
+    <script>
+        /*var age = prompt('请输入你的年龄');
+        if (age>=18){
+            alert('欢迎光临');
+        }
+        else
+        {
+            alert('你的年龄未满18');
+        }*/
+        /*var year = prompt('请输入需要检测的年份');
+        if (year%4==0&&year%100!=0||year%400==0){
+            alert(year+'是闰年');
+        }
+        else{
+            alert(year+'是平年');
+        }*/
+        /*var num = prompt('请输入一个0~59之间的数字');
+        var res = num<10?'0'+num:num;
+        alert(res);*/
+        // var time = prompt('请输入现在的时间');
+        // switch (time) {
+        //     case '12':
+        //         alert('中午好');
+        //         break;
+        // }
+        // var num1 = prompt('请输入第一个数字');
+        // num1 = parseInt(num1);
+        // var num2 = prompt('请输入第二个数字');
+        // num2 = parseInt(num2);
+        // switch (num1>num2) {
+        //     case true:
+        //         alert(num1);
+        //
+        //     case false:
+        //         alert(num2);
+        //         break;
+        // }
+        var num = prompt('请输入学生人数');
+        num = parseInt(num);
+        var sum = 0;
+        var num1 = 0;
+        for (var i = 1;i <= num;i++){
+             num1 = prompt('请输入第'+i+'个学生的成绩');
+            num1 = parseInt(num1);
+             sum +=num1;
+        }
+        var average = sum/num;
+        alert(average);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

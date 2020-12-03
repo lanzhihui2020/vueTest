@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户名 显示隐藏内容</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 400px;
+            margin: 100px auto;
+        }
+        .inp {
+            margin-right: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" class="inp" value="请输入数字">显示和隐藏
+</div>
+<script>
+    var inpu = document.querySelector('input');
+    inpu.onfocus = function () {
+        //查看当前是否是默认值
+       if (this.value === '请输入数字'){
+           this.value = '';
+       }
+    }
+    //如果没输入值，就改回默认值
+    inpu.onblur = function () {
+        if(this.value === ''){
+            this.value = '请输入数字';
+        }
+
+    }
+</script>
+</body>
+</html>

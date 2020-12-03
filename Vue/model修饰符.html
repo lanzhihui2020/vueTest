@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--  懒加载-->
+<input type="text" v-model.lazy="message">
+<h2>{{message}}</h2>
+  <h3>{{typeof message}}</h3>
+</div>
+<script src="vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 111,
+    }
+  })
+</script>
+</body>
+</html>

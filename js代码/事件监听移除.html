@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听移除</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #333333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+    var divs = document.querySelectorAll('div');
+    //1.传统方式解绑
+    divs[0].onclick = function () {
+        alert(111);
+        console.log(111);
+        divs[0].onclick = null;
+    }
+    //用这种不是匿名方式才可以进行解绑
+    divs[1].addEventListener('click',fn);
+    function fn() {
+        alert('one');
+        //解绑方法
+        divs[1].removeEventListener('click',fn);
+    }
+</script>
+</body>
+</html>

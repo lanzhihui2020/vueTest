@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类2</title>
+    <style>
+        p>i:first-child {
+            color: red;
+        }
+        p strong {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<p>p>i:first-child改变<i>第一个i</i>，不增强<i>第二个i</i></p>
+<p>p>i:first-child改变<i>第一个i</i>，不增强<i>第二个i</i></p>
+<p><strong>增强</strong>试试<strong>增强</strong></p>
+<p><strong>增强</strong>试试<strong>增强</strong></p>
+</body>
+</html>
